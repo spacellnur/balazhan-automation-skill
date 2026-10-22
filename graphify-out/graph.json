@@ -1,0 +1,852 @@
+{
+  "metadata": {
+    "generator": "graphify-v1.0",
+    "specification": "https://github.com/safishamsi/graphify",
+    "project": "Balazhan Educational Portal Automation & Skill",
+    "generated_at": "2026-10-22T16:15:00Z",
+    "version": "1.0.0",
+    "node_count": 36,
+    "edge_count": 64,
+    "community_count": 6,
+    "god_node_count": 4,
+    "provenance_summary": {
+      "EXTRACTED": 42,
+      "INFERRED": 22
+    }
+  },
+  "communities": [
+    {
+      "id": 0,
+      "name": "Windows UIAutomation Engine",
+      "color": "#4A90E2",
+      "description": "Low-level Win32 API, Desktop station switching, STA threading, and UIAutomation pattern providers"
+    },
+    {
+      "id": 1,
+      "name": "Balazhan Portal Web DOM",
+      "color": "#E94E77",
+      "description": "Target web application controls on balazhan.nedb.kz (modal dialogues, input controls, radio groups, checkboxes)"
+    },
+    {
+      "id": 2,
+      "name": "Student Data Pipeline",
+      "color": "#50E3C2",
+      "description": "Ingestion from Word/Excel documents, UTF-8 JSON dataset, CSV export, and academic age filtering (<18)"
+    },
+    {
+      "id": 3,
+      "name": "Curator Observation Workflow",
+      "color": "#F5A623",
+      "description": "Curator observation card creation, semester 1/2 assessments, and student status promotion"
+    },
+    {
+      "id": 4,
+      "name": "Agent Skill & CLI Interfaces",
+      "color": "#BD10E0",
+      "description": "Agent SKILL.md definition, PowerShell CLI wrappers, and autonomous agent orchestration"
+    },
+    {
+      "id": 5,
+      "name": "Documentation & Governance",
+      "color": "#9013FE",
+      "description": "User guides, architecture specifications, control references, and tri-lingual README"
+    }
+  ],
+  "god_nodes": [
+    "class::BalazhanAutomation.BalazhanEngine",
+    "data::students.json",
+    "portal::balazhan.nedb.kz",
+    "skill::balazhan-automation"
+  ],
+  "nodes": [
+    {
+      "id": "file::automation/BalazhanEngine.cs",
+      "label": "BalazhanEngine.cs",
+      "type": "file",
+      "community": 0,
+      "community_name": "Windows UIAutomation Engine",
+      "file": "automation/BalazhanEngine.cs",
+      "lines": 395,
+      "degree": 12,
+      "is_god_node": false
+    },
+    {
+      "id": "class::BalazhanAutomation.BalazhanEngine",
+      "label": "BalazhanEngine",
+      "type": "class",
+      "community": 0,
+      "community_name": "Windows UIAutomation Engine",
+      "file": "automation/BalazhanEngine.cs",
+      "degree": 16,
+      "is_god_node": true
+    },
+    {
+      "id": "func::AttachToInteractiveDesktop",
+      "label": "AttachToInteractiveDesktop()",
+      "type": "function",
+      "community": 0,
+      "community_name": "Windows UIAutomation Engine",
+      "file": "automation/BalazhanEngine.cs",
+      "degree": 3,
+      "is_god_node": false
+    },
+    {
+      "id": "func::GetBalazhanChromeWindow",
+      "label": "GetBalazhanChromeWindow()",
+      "type": "function",
+      "community": 0,
+      "community_name": "Windows UIAutomation Engine",
+      "file": "automation/BalazhanEngine.cs",
+      "degree": 4,
+      "is_god_node": false
+    },
+    {
+      "id": "func::CalculateAge",
+      "label": "CalculateAge()",
+      "type": "function",
+      "community": 2,
+      "community_name": "Student Data Pipeline",
+      "file": "automation/BalazhanEngine.cs",
+      "degree": 3,
+      "is_god_node": false
+    },
+    {
+      "id": "func::SyncSocialPassports",
+      "label": "SyncSocialPassports()",
+      "type": "function",
+      "community": 0,
+      "community_name": "Windows UIAutomation Engine",
+      "file": "automation/BalazhanEngine.cs",
+      "degree": 6,
+      "is_god_node": false
+    },
+    {
+      "id": "func::SubmitStudentModal",
+      "label": "SubmitStudentModal()",
+      "type": "function",
+      "community": 0,
+      "community_name": "Windows UIAutomation Engine",
+      "file": "automation/BalazhanEngine.cs",
+      "degree": 7,
+      "is_god_node": false
+    },
+    {
+      "id": "func::SaveCurrentCuratorObservationCard",
+      "label": "SaveCurrentCuratorObservationCard()",
+      "type": "function",
+      "community": 3,
+      "community_name": "Curator Observation Workflow",
+      "file": "automation/BalazhanEngine.cs",
+      "degree": 5,
+      "is_god_node": false
+    },
+    {
+      "id": "file::automation/sync_students.ps1",
+      "label": "sync_students.ps1",
+      "type": "file",
+      "community": 4,
+      "community_name": "Agent Skill & CLI Interfaces",
+      "file": "automation/sync_students.ps1",
+      "lines": 58,
+      "degree": 5,
+      "is_god_node": false
+    },
+    {
+      "id": "skill::balazhan-automation",
+      "label": "SKILL.md (balazhan-automation)",
+      "type": "skill",
+      "community": 4,
+      "community_name": "Agent Skill & CLI Interfaces",
+      "file": ".agent/skills/balazhan-automation/SKILL.md",
+      "lines": 182,
+      "degree": 14,
+      "is_god_node": true
+    },
+    {
+      "id": "data::students.json",
+      "label": "students.json",
+      "type": "data",
+      "community": 2,
+      "community_name": "Student Data Pipeline",
+      "file": "students.json",
+      "lines": 290,
+      "degree": 15,
+      "is_god_node": true
+    },
+    {
+      "id": "data::templates/students_template.json",
+      "label": "students_template.json",
+      "type": "data",
+      "community": 2,
+      "community_name": "Student Data Pipeline",
+      "file": "templates/students_template.json",
+      "lines": 35,
+      "degree": 4,
+      "is_god_node": false
+    },
+    {
+      "id": "data::templates/students_template.csv",
+      "label": "students_template.csv",
+      "type": "data",
+      "community": 2,
+      "community_name": "Student Data Pipeline",
+      "file": "templates/students_template.csv",
+      "lines": 5,
+      "degree": 3,
+      "is_god_node": false
+    },
+    {
+      "id": "data::templates/sample_students.json",
+      "label": "sample_students.json",
+      "type": "data",
+      "community": 2,
+      "community_name": "Student Data Pipeline",
+      "file": "templates/sample_students.json",
+      "lines": 95,
+      "degree": 3,
+      "is_god_node": false
+    },
+    {
+      "id": "portal::balazhan.nedb.kz",
+      "label": "balazhan.nedb.kz/cabinet",
+      "type": "portal_ui",
+      "community": 1,
+      "community_name": "Balazhan Portal Web DOM",
+      "file": "https://balazhan.nedb.kz/cabinet",
+      "degree": 14,
+      "is_god_node": true
+    },
+    {
+      "id": "portal::BtnAddStudent",
+      "label": "Btn: «Добавить студента»",
+      "type": "portal_ui",
+      "community": 1,
+      "community_name": "Balazhan Portal Web DOM",
+      "file": "web_dom",
+      "degree": 3,
+      "is_god_node": false
+    },
+    {
+      "id": "portal::CardOneStudent",
+      "label": "Card: «ОДИН СТУДЕНТ»",
+      "type": "portal_ui",
+      "community": 1,
+      "community_name": "Balazhan Portal Web DOM",
+      "file": "web_dom",
+      "degree": 3,
+      "is_god_node": false
+    },
+    {
+      "id": "portal::ModalAddStudent",
+      "label": "Modal: «Добавить 1 студента»",
+      "type": "portal_ui",
+      "community": 1,
+      "community_name": "Balazhan Portal Web DOM",
+      "file": "web_dom",
+      "degree": 6,
+      "is_god_node": false
+    },
+    {
+      "id": "portal::ModalEdits",
+      "label": "Modal 14 Edit Fields",
+      "type": "portal_ui",
+      "community": 1,
+      "community_name": "Balazhan Portal Web DOM",
+      "file": "web_dom",
+      "degree": 4,
+      "is_god_node": false
+    },
+    {
+      "id": "portal::ModalRadios",
+      "label": "Modal 6 Radio Groups",
+      "type": "portal_ui",
+      "community": 1,
+      "community_name": "Balazhan Portal Web DOM",
+      "file": "web_dom",
+      "degree": 4,
+      "is_god_node": false
+    },
+    {
+      "id": "portal::Modal105Checks",
+      "label": "Modal 105 Social Checkboxes",
+      "type": "portal_ui",
+      "community": 1,
+      "community_name": "Balazhan Portal Web DOM",
+      "file": "docs/modal_checkboxes.txt",
+      "degree": 5,
+      "is_god_node": false
+    },
+    {
+      "id": "portal::StudentTableRow",
+      "label": "Student Table Row & Status",
+      "type": "portal_ui",
+      "community": 1,
+      "community_name": "Balazhan Portal Web DOM",
+      "file": "web_dom",
+      "degree": 5,
+      "is_god_node": false
+    },
+    {
+      "id": "portal::BtnCreateCard",
+      "label": "Btn: «Создать карточку»",
+      "type": "portal_ui",
+      "community": 3,
+      "community_name": "Curator Observation Workflow",
+      "file": "web_dom",
+      "degree": 3,
+      "is_god_node": false
+    },
+    {
+      "id": "portal::Card69Checks",
+      "label": "Observation 69 Checkboxes",
+      "type": "portal_ui",
+      "community": 3,
+      "community_name": "Curator Observation Workflow",
+      "file": "docs/observation_card_details.txt",
+      "degree": 4,
+      "is_god_node": false
+    },
+    {
+      "id": "portal::BtnSaveCard",
+      "label": "Btn: «Сохранить карточку»",
+      "type": "portal_ui",
+      "community": 3,
+      "community_name": "Curator Observation Workflow",
+      "file": "web_dom",
+      "degree": 3,
+      "is_god_node": false
+    },
+    {
+      "id": "portal::StatusFilled",
+      "label": "Status: «Заполнен 1 сем. 2 сем.»",
+      "type": "portal_ui",
+      "community": 3,
+      "community_name": "Curator Observation Workflow",
+      "file": "web_dom",
+      "degree": 4,
+      "is_god_node": false
+    },
+    {
+      "id": "doc::README.md",
+      "label": "README.md",
+      "type": "doc",
+      "community": 5,
+      "community_name": "Documentation & Governance",
+      "file": "README.md",
+      "lines": 280,
+      "degree": 8,
+      "is_god_node": false
+    },
+    {
+      "id": "doc::docs/BALAZHAN_PORTAL_GUIDE.md",
+      "label": "BALAZHAN_PORTAL_GUIDE.md",
+      "type": "doc",
+      "community": 5,
+      "community_name": "Documentation & Governance",
+      "file": "docs/BALAZHAN_PORTAL_GUIDE.md",
+      "lines": 190,
+      "degree": 6,
+      "is_god_node": false
+    },
+    {
+      "id": "doc::docs/ARCHITECTURE.md",
+      "label": "ARCHITECTURE.md",
+      "type": "doc",
+      "community": 5,
+      "community_name": "Documentation & Governance",
+      "file": "docs/ARCHITECTURE.md",
+      "lines": 140,
+      "degree": 5,
+      "is_god_node": false
+    },
+    {
+      "id": "doc::docs/modal_checkboxes.txt",
+      "label": "modal_checkboxes.txt",
+      "type": "doc",
+      "community": 5,
+      "community_name": "Documentation & Governance",
+      "file": "docs/modal_checkboxes.txt",
+      "lines": 105,
+      "degree": 3,
+      "is_god_node": false
+    },
+    {
+      "id": "doc::docs/observation_card_details.txt",
+      "label": "observation_card_details.txt",
+      "type": "doc",
+      "community": 5,
+      "community_name": "Documentation & Governance",
+      "file": "docs/observation_card_details.txt",
+      "lines": 69,
+      "degree": 3,
+      "is_god_node": false
+    },
+    {
+      "id": "doc::graphify-out/GRAPH_REPORT.md",
+      "label": "GRAPH_REPORT.md",
+      "type": "doc",
+      "community": 5,
+      "community_name": "Documentation & Governance",
+      "file": "graphify-out/GRAPH_REPORT.md",
+      "lines": 220,
+      "degree": 5,
+      "is_god_node": false
+    },
+    {
+      "id": "doc::graphify-out/graph.html",
+      "label": "graph.html (D3 Visualizer)",
+      "type": "doc",
+      "community": 5,
+      "community_name": "Documentation & Governance",
+      "file": "graphify-out/graph.html",
+      "lines": 350,
+      "degree": 4,
+      "is_god_node": false
+    },
+    {
+      "id": "rule::Under18Rule",
+      "label": "Policy: Strict Under-18 Rule",
+      "type": "rule",
+      "community": 2,
+      "community_name": "Student Data Pipeline",
+      "file": "governance",
+      "degree": 6,
+      "is_god_node": false
+    },
+    {
+      "id": "rule::Win32DesktopIsolation",
+      "label": "Rule: WinSta0\\default Desktop Isolation",
+      "type": "rule",
+      "community": 0,
+      "community_name": "Windows UIAutomation Engine",
+      "file": "governance",
+      "degree": 4,
+      "is_god_node": false
+    },
+    {
+      "id": "rule::Utf8EncodingIntegrity",
+      "label": "Rule: UTF-8 Cyrillic Encoding Integrity",
+      "type": "rule",
+      "community": 2,
+      "community_name": "Student Data Pipeline",
+      "file": "governance",
+      "degree": 4,
+      "is_god_node": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "file::automation/BalazhanEngine.cs",
+      "target": "class::BalazhanAutomation.BalazhanEngine",
+      "relation": "DEFINES",
+      "confidence": "EXTRACTED",
+      "weight": 5
+    },
+    {
+      "source": "class::BalazhanAutomation.BalazhanEngine",
+      "target": "func::AttachToInteractiveDesktop",
+      "relation": "CONTAINS",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "class::BalazhanAutomation.BalazhanEngine",
+      "target": "func::GetBalazhanChromeWindow",
+      "relation": "CONTAINS",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "class::BalazhanAutomation.BalazhanEngine",
+      "target": "func::CalculateAge",
+      "relation": "CONTAINS",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "class::BalazhanAutomation.BalazhanEngine",
+      "target": "func::SyncSocialPassports",
+      "relation": "CONTAINS",
+      "confidence": "EXTRACTED",
+      "weight": 5
+    },
+    {
+      "source": "class::BalazhanAutomation.BalazhanEngine",
+      "target": "func::SubmitStudentModal",
+      "relation": "CONTAINS",
+      "confidence": "EXTRACTED",
+      "weight": 5
+    },
+    {
+      "source": "class::BalazhanAutomation.BalazhanEngine",
+      "target": "func::SaveCurrentCuratorObservationCard",
+      "relation": "CONTAINS",
+      "confidence": "EXTRACTED",
+      "weight": 5
+    },
+    {
+      "source": "func::AttachToInteractiveDesktop",
+      "target": "rule::Win32DesktopIsolation",
+      "relation": "IMPLEMENTS",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "func::GetBalazhanChromeWindow",
+      "target": "portal::balazhan.nedb.kz",
+      "relation": "LOCATES",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "func::CalculateAge",
+      "target": "rule::Under18Rule",
+      "relation": "ENFORCES",
+      "confidence": "EXTRACTED",
+      "weight": 5
+    },
+    {
+      "source": "func::SyncSocialPassports",
+      "target": "data::students.json",
+      "relation": "READS",
+      "confidence": "EXTRACTED",
+      "weight": 5
+    },
+    {
+      "source": "func::SyncSocialPassports",
+      "target": "func::CalculateAge",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "func::SyncSocialPassports",
+      "target": "func::SubmitStudentModal",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "weight": 5
+    },
+    {
+      "source": "func::SubmitStudentModal",
+      "target": "portal::BtnAddStudent",
+      "relation": "INVOKES",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "portal::BtnAddStudent",
+      "target": "portal::CardOneStudent",
+      "relation": "OPENS",
+      "confidence": "INFERRED",
+      "weight": 3
+    },
+    {
+      "source": "func::SubmitStudentModal",
+      "target": "portal::CardOneStudent",
+      "relation": "INVOKES",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "portal::CardOneStudent",
+      "target": "portal::ModalAddStudent",
+      "relation": "DISPLAYS",
+      "confidence": "INFERRED",
+      "weight": 4
+    },
+    {
+      "source": "func::SubmitStudentModal",
+      "target": "portal::ModalAddStudent",
+      "relation": "AUTOMATES",
+      "confidence": "EXTRACTED",
+      "weight": 5
+    },
+    {
+      "source": "portal::ModalAddStudent",
+      "target": "portal::ModalEdits",
+      "relation": "CONTAINS",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "portal::ModalAddStudent",
+      "target": "portal::ModalRadios",
+      "relation": "CONTAINS",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "portal::ModalAddStudent",
+      "target": "portal::Modal105Checks",
+      "relation": "CONTAINS",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "func::SubmitStudentModal",
+      "target": "portal::ModalEdits",
+      "relation": "SETS_VALUE",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "func::SubmitStudentModal",
+      "target": "portal::ModalRadios",
+      "relation": "SELECTS",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "func::SubmitStudentModal",
+      "target": "portal::Modal105Checks",
+      "relation": "TOGGLES",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "portal::ModalAddStudent",
+      "target": "portal::StudentTableRow",
+      "relation": "CREATES",
+      "confidence": "INFERRED",
+      "weight": 5
+    },
+    {
+      "source": "func::SaveCurrentCuratorObservationCard",
+      "target": "portal::BtnCreateCard",
+      "relation": "INVOKES",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "portal::BtnCreateCard",
+      "target": "portal::Card69Checks",
+      "relation": "DISPLAYS",
+      "confidence": "INFERRED",
+      "weight": 4
+    },
+    {
+      "source": "func::SaveCurrentCuratorObservationCard",
+      "target": "portal::Card69Checks",
+      "relation": "TOGGLES",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "func::SaveCurrentCuratorObservationCard",
+      "target": "portal::BtnSaveCard",
+      "relation": "INVOKES",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "portal::BtnSaveCard",
+      "target": "portal::StatusFilled",
+      "relation": "TRANSITIONS_TO",
+      "confidence": "INFERRED",
+      "weight": 5
+    },
+    {
+      "source": "portal::StudentTableRow",
+      "target": "portal::StatusFilled",
+      "relation": "DISPLAYS",
+      "confidence": "INFERRED",
+      "weight": 4
+    },
+    {
+      "source": "file::automation/sync_students.ps1",
+      "target": "class::BalazhanAutomation.BalazhanEngine",
+      "relation": "CALLS",
+      "confidence": "EXTRACTED",
+      "weight": 5
+    },
+    {
+      "source": "file::automation/sync_students.ps1",
+      "target": "data::students.json",
+      "relation": "PASSES_PARAM",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "skill::balazhan-automation",
+      "target": "file::automation/sync_students.ps1",
+      "relation": "RUNS",
+      "confidence": "EXTRACTED",
+      "weight": 5
+    },
+    {
+      "source": "skill::balazhan-automation",
+      "target": "class::BalazhanAutomation.BalazhanEngine",
+      "relation": "DESCRIBES",
+      "confidence": "INFERRED",
+      "weight": 4
+    },
+    {
+      "source": "skill::balazhan-automation",
+      "target": "rule::Under18Rule",
+      "relation": "MANDATES",
+      "confidence": "INFERRED",
+      "weight": 5
+    },
+    {
+      "source": "skill::balazhan-automation",
+      "target": "data::templates/students_template.json",
+      "relation": "REFERENCES",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "skill::balazhan-automation",
+      "target": "doc::docs/BALAZHAN_PORTAL_GUIDE.md",
+      "relation": "LINKS_TO",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "data::templates/students_template.json",
+      "target": "data::students.json",
+      "relation": "STANDARDIZES",
+      "confidence": "INFERRED",
+      "weight": 4
+    },
+    {
+      "source": "data::templates/students_template.csv",
+      "target": "data::students.json",
+      "relation": "ALTERNATIVE_FORMAT",
+      "confidence": "INFERRED",
+      "weight": 3
+    },
+    {
+      "source": "data::templates/sample_students.json",
+      "target": "data::templates/students_template.json",
+      "relation": "INSTANTIATES",
+      "confidence": "EXTRACTED",
+      "weight": 3
+    },
+    {
+      "source": "data::students.json",
+      "target": "rule::Utf8EncodingIntegrity",
+      "relation": "REQUIRES",
+      "confidence": "INFERRED",
+      "weight": 4
+    },
+    {
+      "source": "portal::balazhan.nedb.kz",
+      "target": "portal::BtnAddStudent",
+      "relation": "CONTAINS",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "portal::balazhan.nedb.kz",
+      "target": "portal::StudentTableRow",
+      "relation": "DISPLAYS",
+      "confidence": "EXTRACTED",
+      "weight": 5
+    },
+    {
+      "source": "doc::README.md",
+      "target": "skill::balazhan-automation",
+      "relation": "EXPLAINS",
+      "confidence": "INFERRED",
+      "weight": 5
+    },
+    {
+      "source": "doc::README.md",
+      "target": "class::BalazhanAutomation.BalazhanEngine",
+      "relation": "DOCUMENTS",
+      "confidence": "INFERRED",
+      "weight": 4
+    },
+    {
+      "source": "doc::README.md",
+      "target": "doc::graphify-out/GRAPH_REPORT.md",
+      "relation": "CITES",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "doc::README.md",
+      "target": "doc::graphify-out/graph.html",
+      "relation": "LINKS_TO",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "doc::docs/BALAZHAN_PORTAL_GUIDE.md",
+      "target": "portal::balazhan.nedb.kz",
+      "relation": "GUIDES_USER",
+      "confidence": "INFERRED",
+      "weight": 5
+    },
+    {
+      "source": "doc::docs/BALAZHAN_PORTAL_GUIDE.md",
+      "target": "doc::docs/modal_checkboxes.txt",
+      "relation": "DETAILS",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "doc::docs/BALAZHAN_PORTAL_GUIDE.md",
+      "target": "doc::docs/observation_card_details.txt",
+      "relation": "DETAILS",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "doc::docs/ARCHITECTURE.md",
+      "target": "class::BalazhanAutomation.BalazhanEngine",
+      "relation": "ANALYZES",
+      "confidence": "INFERRED",
+      "weight": 5
+    },
+    {
+      "source": "doc::docs/ARCHITECTURE.md",
+      "target": "rule::Win32DesktopIsolation",
+      "relation": "EXPLAINS",
+      "confidence": "INFERRED",
+      "weight": 4
+    },
+    {
+      "source": "doc::graphify-out/GRAPH_REPORT.md",
+      "target": "class::BalazhanAutomation.BalazhanEngine",
+      "relation": "AUDITS",
+      "confidence": "INFERRED",
+      "weight": 5
+    },
+    {
+      "source": "doc::graphify-out/GRAPH_REPORT.md",
+      "target": "data::students.json",
+      "relation": "AUDITS",
+      "confidence": "INFERRED",
+      "weight": 5
+    },
+    {
+      "source": "doc::graphify-out/GRAPH_REPORT.md",
+      "target": "portal::balazhan.nedb.kz",
+      "relation": "AUDITS",
+      "confidence": "INFERRED",
+      "weight": 5
+    },
+    {
+      "source": "doc::graphify-out/graph.html",
+      "target": "file::automation/BalazhanEngine.cs",
+      "relation": "VISUALIZES",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "portal::Modal105Checks",
+      "target": "doc::docs/modal_checkboxes.txt",
+      "relation": "CATALOGUED_IN",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    },
+    {
+      "source": "portal::Card69Checks",
+      "target": "doc::docs/observation_card_details.txt",
+      "relation": "CATALOGUED_IN",
+      "confidence": "EXTRACTED",
+      "weight": 4
+    }
+  ]
+}

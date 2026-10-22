@@ -1,0 +1,43 @@
+# Windows desktop and thumbnail caches
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Executable outputs and intermediate compile caches
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlog
+*.idb
+
+# Visual Studio / VSCode
+.vscode/
+.vs/
+*.swp
+*.bak
+
+# Temporary and local test outputs
+*.tmp
+*.log
+archive/
+bin/
+
+# Video files (exceed GitHub 100MB file limit)
+YouTube_Videos/
+*.mp4
+
+# Sensitive personal data (exclude production teacher lists with real student PII)
+# Keep sample_students.json and templates committed
+students.json
+*.docx
+ТБ-*.csv
+students_full.html
+test_kazakh.html
